@@ -24,7 +24,7 @@ struct AppProjectCard: View {
                             .foregroundStyle(.secondary)
                     }
 
-                    if let launchDate = project.launchDate,
+                    if project.launchDate != nil,
                        let days = project.daysSinceLaunch {
                         Text("Launched \(days) days ago")
                             .font(.caption)

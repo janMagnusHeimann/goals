@@ -92,7 +92,7 @@ struct BookMilestone: Codable {
 struct FitnessGoalSuggestion: Codable {
     let suggestedWeeklyHours: Double?
     let weeklyBreakdown: WorkoutBreakdown?
-    let phaseStructure: [TrainingPhase]?
+    let phaseStructure: [SuggestedTrainingPhase]?
     let keyWorkouts: [String]?
     let summary: String?
 }
@@ -105,7 +105,7 @@ struct WorkoutBreakdown: Codable {
     let recovery: Double?
 }
 
-struct TrainingPhase: Codable {
+struct SuggestedTrainingPhase: Codable {
     let name: String
     let weeks: Int
     let focus: String

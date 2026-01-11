@@ -6,31 +6,17 @@ struct StarTrendChart: View {
     var daysToShow: Int = 90
 
     private var chartData: [StarDataPoint] {
-        var allData: [StarDataPoint] = []
-
-        for repo in repositories {
-            guard let history = repo.starHistory else { continue }
-
-            for entry in history {
-                allData.append(StarDataPoint(
-                    date: entry.date,
-                    starCount: entry.starCount,
-                    repositoryName: repo.name
-                ))
-            }
-        }
-
-        return allData.sorted { $0.date < $1.date }
+        // No star history available in the model
+        []
     }
 
     private var latestTotalStars: Int {
-        repositories.reduce(0) { $0 + $1.stars }
+        repositories.reduce(0) { $0 + $1.starCount }
     }
 
     private var weeklyGrowth: Int {
-        repositories.reduce(0) { total, repo in
-            total + ((repo.starHistory ?? []).starGrowthThisWeek)
-        }
+        // No star history available
+        0
     }
 
     var body: some View {
@@ -114,7 +100,7 @@ struct StarTrendChart: View {
                 Divider()
 
                 VStack(spacing: 8) {
-                    ForEach(repositories.sorted { $0.stars > $1.stars }) { repo in
+                    ForEach(repositories.sorted { $0.starCount > $1.starCount }) { repo in
                         RepositoryStarRow(repository: repo)
                     }
                 }
@@ -145,10 +131,6 @@ struct StarDataPoint: Identifiable {
 struct RepositoryStarRow: View {
     let repository: GitHubRepository
 
-    private var weeklyGrowth: Int {
-        (repository.starHistory ?? []).starGrowthThisWeek
-    }
-
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: "book.closed.fill")
@@ -159,7 +141,7 @@ struct RepositoryStarRow: View {
                     .font(.subheadline)
                     .fontWeight(.medium)
 
-                if let language = repository.primaryLanguage {
+                if let language = repository.language {
                     Text(language)
                         .font(.caption)
                         .foregroundStyle(.secondary)
@@ -173,7 +155,7 @@ struct RepositoryStarRow: View {
                 HStack(spacing: 4) {
                     Image(systemName: "star.fill")
                         .foregroundStyle(.yellow)
-                    Text("\(repository.stars)")
+                    Text("\(repository.starCount)")
                 }
                 .font(.subheadline)
 
@@ -181,24 +163,10 @@ struct RepositoryStarRow: View {
                 HStack(spacing: 4) {
                     Image(systemName: "tuningfork")
                         .foregroundStyle(.secondary)
-                    Text("\(repository.forks)")
+                    Text("\(repository.forkCount)")
                 }
                 .font(.caption)
                 .foregroundStyle(.secondary)
-
-                // Weekly growth
-                if weeklyGrowth != 0 {
-                    HStack(spacing: 2) {
-                        Image(systemName: weeklyGrowth > 0 ? "arrow.up" : "arrow.down")
-                        Text("\(abs(weeklyGrowth))")
-                    }
-                    .font(.caption)
-                    .foregroundStyle(weeklyGrowth > 0 ? .green : .red)
-                    .padding(.horizontal, 6)
-                    .padding(.vertical, 2)
-                    .background((weeklyGrowth > 0 ? Color.green : Color.red).opacity(0.1))
-                    .clipShape(Capsule())
-                }
             }
         }
     }
@@ -210,17 +178,11 @@ struct StarsSummaryCard: View {
     let repositories: [GitHubRepository]
 
     private var totalStars: Int {
-        repositories.reduce(0) { $0 + $1.stars }
+        repositories.reduce(0) { $0 + $1.starCount }
     }
 
     private var totalForks: Int {
-        repositories.reduce(0) { $0 + $1.forks }
-    }
-
-    private var weeklyGrowth: Int {
-        repositories.reduce(0) { total, repo in
-            total + ((repo.starHistory ?? []).starGrowthThisWeek)
-        }
+        repositories.reduce(0) { $0 + $1.forkCount }
     }
 
     var body: some View {
@@ -245,33 +207,21 @@ struct StarsSummaryCard: View {
 
             Spacer()
 
-            VStack(alignment: .trailing, spacing: 12) {
-                if weeklyGrowth != 0 {
-                    HStack(spacing: 4) {
-                        Image(systemName: weeklyGrowth > 0 ? "arrow.up.right.circle.fill" : "arrow.down.right.circle.fill")
-                        Text("+\(weeklyGrowth)")
-                    }
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(weeklyGrowth > 0 ? .green : .red)
+            HStack(spacing: 12) {
+                VStack(alignment: .trailing, spacing: 2) {
+                    Text("\(totalForks)")
+                        .font(.headline)
+                    Text("forks")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
                 }
 
-                HStack(spacing: 12) {
-                    VStack(alignment: .trailing, spacing: 2) {
-                        Text("\(totalForks)")
-                            .font(.headline)
-                        Text("forks")
-                            .font(.caption2)
-                            .foregroundStyle(.secondary)
-                    }
-
-                    VStack(alignment: .trailing, spacing: 2) {
-                        Text("\(repositories.count)")
-                            .font(.headline)
-                        Text("repos")
-                            .font(.caption2)
-                            .foregroundStyle(.secondary)
-                    }
+                VStack(alignment: .trailing, spacing: 2) {
+                    Text("\(repositories.count)")
+                        .font(.headline)
+                    Text("repos")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
                 }
             }
         }
@@ -290,37 +240,9 @@ struct StarsSummaryCard: View {
 // MARK: - Preview
 
 #Preview {
-    // Create sample repositories
-    let repo1 = GitHubRepository(name: "awesome-swift", fullName: "user/awesome-swift")
-    repo1.stars = 1250
-    repo1.forks = 150
-    repo1.primaryLanguage = "Swift"
-
-    let repo2 = GitHubRepository(name: "goals-tracker", fullName: "user/goals-tracker")
-    repo2.stars = 340
-    repo2.forks = 25
-    repo2.primaryLanguage = "Swift"
-
-    // Create star history
-    let history1: [StarHistory] = (0..<30).map { daysAgo in
-        StarHistory(
-            date: Calendar.current.date(byAdding: .day, value: -daysAgo, to: Date())!,
-            starCount: 1250 - (daysAgo * 3)
-        )
-    }
-    repo1.starHistory = history1
-
-    let history2: [StarHistory] = (0..<30).map { daysAgo in
-        StarHistory(
-            date: Calendar.current.date(byAdding: .day, value: -daysAgo, to: Date())!,
-            starCount: 340 - (daysAgo * 1)
-        )
-    }
-    repo2.starHistory = history2
-
-    return VStack(spacing: 20) {
-        StarsSummaryCard(repositories: [repo1, repo2])
-        StarTrendChart(repositories: [repo1, repo2])
+    VStack(spacing: 20) {
+        StarsSummaryCard(repositories: [])
+        StarTrendChart(repositories: [])
     }
     .padding()
     .frame(width: 600, height: 600)

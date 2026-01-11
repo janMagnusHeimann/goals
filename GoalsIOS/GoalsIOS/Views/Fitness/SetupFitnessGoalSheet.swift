@@ -280,7 +280,7 @@ struct SetupFitnessGoalSheet: View {
             config.weeklyMileageTargetKm = Double(weeklyMileageTarget) ?? 50
             config.currentPhase = currentPhase
         } else if fitnessGoalType == .consistencyGoal {
-            config.workoutsPerWeekTarget = workoutsPerWeek
+            config.sessionsPerWeek = workoutsPerWeek
         }
 
         onSave(config)

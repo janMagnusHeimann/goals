@@ -149,6 +149,14 @@ final class Goal {
         (repositories ?? []).reduce(0) { $0 + $1.starCount }
     }
 
+    var formattedThisMonthAppRevenue: String {
+        String(format: "$%.2f", thisMonthAppRevenue)
+    }
+
+    var formattedTotalAppRevenue: String {
+        String(format: "$%.2f", totalAppRevenue)
+    }
+
     // MARK: - Year-Related Properties
 
     var goalYear: Int {

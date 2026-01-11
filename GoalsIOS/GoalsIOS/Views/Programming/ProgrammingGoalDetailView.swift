@@ -141,7 +141,7 @@ struct ProgrammingGoalDetailView: View {
                     Divider()
 
                     VStack {
-                        Text("\(goal.sortedRepositories.reduce(0) { $0 + $1.forks })")
+                        Text("\(goal.sortedRepositories.reduce(0) { $0 + $1.forkCount })")
                             .font(.title2)
                             .fontWeight(.bold)
                         Text("Forks")

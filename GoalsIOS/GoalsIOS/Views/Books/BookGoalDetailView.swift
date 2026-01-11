@@ -56,11 +56,7 @@ struct BookGoalDetailView: View {
             // Reading Stats Section
             if !allReadingSessions.isEmpty {
                 Section("Reading Stats") {
-                    ReadingStatsView(
-                        sessions: allReadingSessions,
-                        books: goal.sortedBooks,
-                        compact: true
-                    )
+                    ReadingStatsView(goal: goal)
                 }
             }
 

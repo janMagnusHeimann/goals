@@ -43,6 +43,31 @@
 		B10000010000000000000034 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000034 /* PreviewData.swift */; };
 		B10000010000000000000035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000035 /* Assets.xcassets */; };
 		B10000010000000000000036 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000036 /* OverviewView.swift */; };
+		B10000010000000000000100 /* ReadingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000100 /* ReadingSession.swift */; };
+		B10000010000000000000101 /* FitnessGoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000101 /* FitnessGoalType.swift */; };
+		B10000010000000000000102 /* FitnessGoalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000102 /* FitnessGoalConfig.swift */; };
+		B10000010000000000000103 /* PersonalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000103 /* PersonalRecord.swift */; };
+		B10000010000000000000104 /* AppProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000104 /* AppProject.swift */; };
+		B10000010000000000000105 /* RevenueEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000105 /* RevenueEntry.swift */; };
+		B10000010000000000000106 /* StarHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000106 /* StarHistory.swift */; };
+		B10000010000000000000110 /* AnimatedProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000110 /* AnimatedProgressRing.swift */; };
+		B10000010000000000000111 /* StreakBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000111 /* StreakBadge.swift */; };
+		B10000010000000000000112 /* TrendIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000112 /* TrendIndicator.swift */; };
+		B10000010000000000000113 /* SparklineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000113 /* SparklineChart.swift */; };
+		B10000010000000000000120 /* CurrentlyReadingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000120 /* CurrentlyReadingCard.swift */; };
+		B10000010000000000000121 /* ReadingStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000121 /* ReadingStatsView.swift */; };
+		B10000010000000000000122 /* LogReadingSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000122 /* LogReadingSheet.swift */; };
+		B10000010000000000000130 /* PersonalRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000130 /* PersonalRecordsView.swift */; };
+		B10000010000000000000131 /* RaceTrainingDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000131 /* RaceTrainingDashboard.swift */; };
+		B10000010000000000000132 /* SetupFitnessGoalSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000132 /* SetupFitnessGoalSheet.swift */; };
+		B10000010000000000000133 /* PaceComparisonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000133 /* PaceComparisonCard.swift */; };
+		B10000010000000000000134 /* TrainingPhaseTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000134 /* TrainingPhaseTimeline.swift */; };
+		B10000010000000000000135 /* WeeklyMileageChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000135 /* WeeklyMileageChart.swift */; };
+		B10000010000000000000140 /* AddAppProjectSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000140 /* AddAppProjectSheet.swift */; };
+		B10000010000000000000141 /* AddRevenueSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000141 /* AddRevenueSheet.swift */; };
+		B10000010000000000000142 /* AppProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000142 /* AppProjectCard.swift */; };
+		B10000010000000000000143 /* RevenueChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000143 /* RevenueChart.swift */; };
+		B10000010000000000000144 /* StarTrendChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000144 /* StarTrendChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +107,31 @@
 		B20000010000000000000034 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		B20000010000000000000035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B20000010000000000000036 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
+		B20000010000000000000100 /* ReadingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingSession.swift; sourceTree = "<group>"; };
+		B20000010000000000000101 /* FitnessGoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessGoalType.swift; sourceTree = "<group>"; };
+		B20000010000000000000102 /* FitnessGoalConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessGoalConfig.swift; sourceTree = "<group>"; };
+		B20000010000000000000103 /* PersonalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalRecord.swift; sourceTree = "<group>"; };
+		B20000010000000000000104 /* AppProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProject.swift; sourceTree = "<group>"; };
+		B20000010000000000000105 /* RevenueEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueEntry.swift; sourceTree = "<group>"; };
+		B20000010000000000000106 /* StarHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarHistory.swift; sourceTree = "<group>"; };
+		B20000010000000000000110 /* AnimatedProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedProgressRing.swift; sourceTree = "<group>"; };
+		B20000010000000000000111 /* StreakBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakBadge.swift; sourceTree = "<group>"; };
+		B20000010000000000000112 /* TrendIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendIndicator.swift; sourceTree = "<group>"; };
+		B20000010000000000000113 /* SparklineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparklineChart.swift; sourceTree = "<group>"; };
+		B20000010000000000000120 /* CurrentlyReadingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentlyReadingCard.swift; sourceTree = "<group>"; };
+		B20000010000000000000121 /* ReadingStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingStatsView.swift; sourceTree = "<group>"; };
+		B20000010000000000000122 /* LogReadingSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogReadingSheet.swift; sourceTree = "<group>"; };
+		B20000010000000000000130 /* PersonalRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalRecordsView.swift; sourceTree = "<group>"; };
+		B20000010000000000000131 /* RaceTrainingDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTrainingDashboard.swift; sourceTree = "<group>"; };
+		B20000010000000000000132 /* SetupFitnessGoalSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupFitnessGoalSheet.swift; sourceTree = "<group>"; };
+		B20000010000000000000133 /* PaceComparisonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceComparisonCard.swift; sourceTree = "<group>"; };
+		B20000010000000000000134 /* TrainingPhaseTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPhaseTimeline.swift; sourceTree = "<group>"; };
+		B20000010000000000000135 /* WeeklyMileageChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyMileageChart.swift; sourceTree = "<group>"; };
+		B20000010000000000000140 /* AddAppProjectSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppProjectSheet.swift; sourceTree = "<group>"; };
+		B20000010000000000000141 /* AddRevenueSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRevenueSheet.swift; sourceTree = "<group>"; };
+		B20000010000000000000142 /* AppProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProjectCard.swift; sourceTree = "<group>"; };
+		B20000010000000000000143 /* RevenueChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueChart.swift; sourceTree = "<group>"; };
+		B20000010000000000000144 /* StarTrendChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTrendChart.swift; sourceTree = "<group>"; };
 		B30000010000000000000001 /* GoalsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +185,7 @@
 				B20000010000000000000006 /* Book.swift */,
 				B20000010000000000000007 /* Chapter.swift */,
 				B20000010000000000000008 /* ChapterNote.swift */,
+				B20000010000000000000100 /* ReadingSession.swift */,
 			);
 			path = BookGoal;
 			sourceTree = "<group>";
@@ -143,6 +194,9 @@
 			isa = PBXGroup;
 			children = (
 				B20000010000000000000009 /* TrainingSession.swift */,
+				B20000010000000000000101 /* FitnessGoalType.swift */,
+				B20000010000000000000102 /* FitnessGoalConfig.swift */,
+				B20000010000000000000103 /* PersonalRecord.swift */,
 			);
 			path = FitnessGoal;
 			sourceTree = "<group>";
@@ -152,6 +206,9 @@
 			children = (
 				B20000010000000000000010 /* GitHubRepository.swift */,
 				B20000010000000000000011 /* CommitActivity.swift */,
+				B20000010000000000000104 /* AppProject.swift */,
+				B20000010000000000000105 /* RevenueEntry.swift */,
+				B20000010000000000000106 /* StarHistory.swift */,
 			);
 			path = ProgrammingGoal;
 			sourceTree = "<group>";
@@ -188,6 +245,10 @@
 				B20000010000000000000022 /* ProgressRing.swift */,
 				B20000010000000000000023 /* AddGoalSheet.swift */,
 				B20000010000000000000024 /* CoverImageView.swift */,
+				B20000010000000000000110 /* AnimatedProgressRing.swift */,
+				B20000010000000000000111 /* StreakBadge.swift */,
+				B20000010000000000000112 /* TrendIndicator.swift */,
+				B20000010000000000000113 /* SparklineChart.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -199,6 +260,9 @@
 				B20000010000000000000026 /* BookDetailView.swift */,
 				B20000010000000000000027 /* AddBookSheet.swift */,
 				B20000010000000000000028 /* ChapterNotesView.swift */,
+				B20000010000000000000120 /* CurrentlyReadingCard.swift */,
+				B20000010000000000000121 /* ReadingStatsView.swift */,
+				B20000010000000000000122 /* LogReadingSheet.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -208,8 +272,22 @@
 			children = (
 				B20000010000000000000029 /* FitnessGoalDetailView.swift */,
 				B20000010000000000000030 /* AddTrainingSessionSheet.swift */,
+				B20000010000000000000130 /* PersonalRecordsView.swift */,
+				B20000010000000000000131 /* RaceTrainingDashboard.swift */,
+				B20000010000000000000132 /* SetupFitnessGoalSheet.swift */,
+				B50000010000000000000050 /* Components */,
 			);
 			path = Fitness;
+			sourceTree = "<group>";
+		};
+		B50000010000000000000050 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B20000010000000000000133 /* PaceComparisonCard.swift */,
+				B20000010000000000000134 /* TrainingPhaseTimeline.swift */,
+				B20000010000000000000135 /* WeeklyMileageChart.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B50000010000000000000015 /* Programming */ = {
@@ -217,8 +295,21 @@
 			children = (
 				B20000010000000000000031 /* ProgrammingGoalDetailView.swift */,
 				B20000010000000000000032 /* AddRepositorySheet.swift */,
+				B20000010000000000000140 /* AddAppProjectSheet.swift */,
+				B20000010000000000000141 /* AddRevenueSheet.swift */,
+				B50000010000000000000051 /* Components */,
 			);
 			path = Programming;
+			sourceTree = "<group>";
+		};
+		B50000010000000000000051 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B20000010000000000000142 /* AppProjectCard.swift */,
+				B20000010000000000000143 /* RevenueChart.swift */,
+				B20000010000000000000144 /* StarTrendChart.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B50000010000000000000016 /* Settings */ = {
@@ -411,6 +502,31 @@
 				B10000010000000000000033 /* SettingsView.swift in Sources */,
 				B10000010000000000000034 /* PreviewData.swift in Sources */,
 				B10000010000000000000036 /* OverviewView.swift in Sources */,
+				B10000010000000000000100 /* ReadingSession.swift in Sources */,
+				B10000010000000000000101 /* FitnessGoalType.swift in Sources */,
+				B10000010000000000000102 /* FitnessGoalConfig.swift in Sources */,
+				B10000010000000000000103 /* PersonalRecord.swift in Sources */,
+				B10000010000000000000104 /* AppProject.swift in Sources */,
+				B10000010000000000000105 /* RevenueEntry.swift in Sources */,
+				B10000010000000000000106 /* StarHistory.swift in Sources */,
+				B10000010000000000000110 /* AnimatedProgressRing.swift in Sources */,
+				B10000010000000000000111 /* StreakBadge.swift in Sources */,
+				B10000010000000000000112 /* TrendIndicator.swift in Sources */,
+				B10000010000000000000113 /* SparklineChart.swift in Sources */,
+				B10000010000000000000120 /* CurrentlyReadingCard.swift in Sources */,
+				B10000010000000000000121 /* ReadingStatsView.swift in Sources */,
+				B10000010000000000000122 /* LogReadingSheet.swift in Sources */,
+				B10000010000000000000130 /* PersonalRecordsView.swift in Sources */,
+				B10000010000000000000131 /* RaceTrainingDashboard.swift in Sources */,
+				B10000010000000000000132 /* SetupFitnessGoalSheet.swift in Sources */,
+				B10000010000000000000133 /* PaceComparisonCard.swift in Sources */,
+				B10000010000000000000134 /* TrainingPhaseTimeline.swift in Sources */,
+				B10000010000000000000135 /* WeeklyMileageChart.swift in Sources */,
+				B10000010000000000000140 /* AddAppProjectSheet.swift in Sources */,
+				B10000010000000000000141 /* AddRevenueSheet.swift in Sources */,
+				B10000010000000000000142 /* AppProjectCard.swift in Sources */,
+				B10000010000000000000143 /* RevenueChart.swift in Sources */,
+				B10000010000000000000144 /* StarTrendChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

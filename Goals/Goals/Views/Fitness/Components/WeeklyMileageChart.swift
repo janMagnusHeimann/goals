@@ -109,24 +109,24 @@ struct WeeklyMileageChart: View {
 
             // Summary stats
             HStack(spacing: 24) {
-                StatItem(
+                MileageStatItem(
                     label: "Average",
                     value: String(format: "%.1f km", averageWeeklyMileage)
                 )
 
                 if let target = targetMileageKm {
-                    StatItem(
+                    MileageStatItem(
                         label: "Target",
                         value: String(format: "%.0f km", target)
                     )
                 }
 
-                StatItem(
+                MileageStatItem(
                     label: "Peak",
                     value: String(format: "%.1f km", peakWeeklyMileage)
                 )
 
-                StatItem(
+                MileageStatItem(
                     label: "Total",
                     value: String(format: "%.0f km", totalMileage)
                 )
@@ -177,7 +177,7 @@ struct WeeklyMileage: Identifiable {
     }
 }
 
-private struct StatItem: View {
+private struct MileageStatItem: View {
     let label: String
     let value: String
 

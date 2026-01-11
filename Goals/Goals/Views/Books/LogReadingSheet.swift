@@ -205,11 +205,11 @@ struct LogReadingSheet: View {
 
     private func saveSession() {
         let session = ReadingSession(
-            date: date,
             pagesRead: pagesValue,
-            durationMinutes: durationValue > 0 ? durationValue : nil,
+            durationMinutes: durationValue,
             startPage: book.currentPage,
             endPage: projectedEndPage,
+            date: date,
             notes: notes.isEmpty ? nil : notes
         )
 

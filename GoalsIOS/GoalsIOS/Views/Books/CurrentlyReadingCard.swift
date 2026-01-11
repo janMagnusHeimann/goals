@@ -149,6 +149,7 @@ struct CurrentlyReadingCard: View {
 
 struct CompactCurrentlyReadingCard: View {
     let book: Book
+    var onLogReading: (() -> Void)?
 
     var body: some View {
         HStack(spacing: 12) {
